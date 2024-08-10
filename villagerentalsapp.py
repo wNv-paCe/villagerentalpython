@@ -305,7 +305,7 @@ class VillageRentalsApp:
                 daily_rate = result[0]
                 rental_days = (datetime.strptime(return_date, "%Y-%m-%d") - datetime.strptime(rental_date, "%Y-%m-%d")).days
                 total_cost = rental_days * daily_rate
-                self.cost_label.config(text=f"{total_cost:.2f}")
+                self.cost_label.config(text=f"${total_cost:.2f}")
             else:
                 messagebox.showerror("Error", "Equipment ID not found!")
 
